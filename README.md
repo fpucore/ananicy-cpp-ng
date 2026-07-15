@@ -1,4 +1,4 @@
-![Ananicy Cpp NG Logo](./assets/ananicy_logo.svg)
+![Ananicy Cpp logo](assets/ananicy_logo.png)
 
 Modernized, patched x86_64 build of ananicy-cpp.
 
@@ -6,13 +6,17 @@ Modernized, patched x86_64 build of ananicy-cpp.
 
 **Ananicy C++ NG (Next Generation)** is a modernized, heavily patched fork (v2.0.0+) designed to compile and run seamlessly on the GNU Operating System / H-Linux plaform, and x86_64 Linux environments, specifically addressing toolchain strictness in GCC 16+ and native header collisions in modern glibc.
 
+Ananicy C++ NG is a fully drop-in replacement for Ananicy and Ananicy Cpp.
+
+It remains fully compatible with pre-made community rules.
+
 ## What's new?
 
 This fork (starting at v2.0.0) introduces critical compatibility patches over the original `ananicy-cpp` source code to support modern build toolchains:
 * **Modern Compiler Support:** Explicitly patched to satisfy GCC 16+ standard library requirements (`<cstring>`, `<unistd.h>`, `<cstdint>`).
-* **glibc Namespace Isolation:** The custom `sched_attr` structures and `sched_getattr` syscalls have been safely namespaced (`ananicy_sched_attr`) to prevent build failures when colliding with modern native glibc kernel headers.
+* **glibc Namespace Isolation:** The custom `sched_attr` structures and `sched_getattr` syscalls have been safely namespaced (`ananicy_sched_attr`) to prevent build failures when colliding with modern native `glibc` kernel headers.
 * **Streamlined Build Process:** Deliberate suppression of `CPM.cmake` development warnings for a clean, noise-free configuration and compilation procedure.
-* **eBPF Submodule Stability:** Surgical CMake (re)targeting to ensure the internal eBPF submodules (re)link correctly under new *-ng calls without breaking the internals.
+* **eBPF Submodule Stability:** Surgical `CMake` (re)targeting to ensure the internal `eBPF` submodules (re)link correctly under new *-ng calls without breaking the internals.
 
 ## What works?
 
@@ -24,7 +28,7 @@ This fork (starting at v2.0.0) introduces critical compatibility patches over th
 - [X] Setting OOM score
 - [X] Change default configuration file and rules directory using environment variables (`ANANICY_CPP_{CONF,CONFDIR}`)
 - [X] Cgroups
-  ~~- [X] V1~~
+  - ~~[X] V1~~
   - [X] ~~V2 (_Limited support_)~~ Native systemd DBus integration (Cgroups V2 exclusive)
 - [X] Autogroup
 - [X] Improved systemd integration
@@ -56,22 +60,17 @@ This package is intended for deep integration with the GNU Operating system / H-
 - H-Linux Standard Library
 - goto (Optional, but recommended)
 - H-Linux Human Command Layer
-- [CMake](https://cmake.org/download/) 3.17+
-- [fmtlib](https://github.com/fmtlib/fmt) 8.0+
-- [spdlog](https://github.com/gabime/spdlog) 1.9+
-- [nlohmann_json](https://github.com/nlohmann/json) 3.9+
-- C++ compiler compatible with C++20 (`g++ >= 10` or `clang++ >= 10`). Fully tested against `g++ 16.1.1`.
+- CMake
+- fmtlib
+- spdlog
+- nlohmann_json
+- C++ compiler (g++ or clang++) (Fully tested against g++ 16.1.1)
 - systemd / libsystemd
 - _Optional (required for bpf implementation)_:
-    - [bpf](https://www.kernel.org) 
-    - [libbpf](https://github.com/libbpf/libbpf)
-    - [libelf](https://sourceware.org/elfutils/)
-    - [clang](https://clang.llvm.org/) clang++ >= 10
-
-### H-Linux
-Ananicy C++ NG is a fully drop-in replacement for Ananicy and Ananicy Cpp, forked, patched and modernized.
-
-It remains fully compatible with pre-made community rules.
+    - bpf
+    - libbpf
+    - libelf
+    - clang
 
 #### Build & Install
 
