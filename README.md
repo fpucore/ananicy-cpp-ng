@@ -98,8 +98,16 @@ Licensed under GPLv3 or later. See https://www.gnu.org/licenses/gpl-3.0.html
 
 ---
 
-## Author
+## Maintainer
 
 Chris McGimpsey-Jones (2026)
 
 chrisjones.unixmen@gmail.com
+
+---
+
+## Contributor
+
+Antoine Viallon (2021-2026)
+
+antoine@lesviallon.fr
