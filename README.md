@@ -58,6 +58,25 @@ You no longer need to worry about filesystem permissions for `/sys/fs/cgroup/`; 
 
 ---
 
+## How Ananicy C++ NG compares to its predecessor(s)
+
+The following table summarizes the key differences between the original Ananicy, Ananicy Cpp, and this actively maintained fork.
+
+## Feature Comparison
+
+| Feature                      | ananicy | ananicy-cpp | ananicy-cpp-ng |
+| ---------------------------- | :-----: | :---------: | :------------: |
+| Modern GCC (16+) support     |    ❌    |      ❌      |        ✅       |
+| Modern glibc compatibility   |    ❌    |      ❌      |        ✅       |
+| Native Cgroups V2            |    ❌    |  ⚠️ Limited |        ✅       |
+| systemd DBus integration     |    ❌    |  ⚠️ Partial |        ✅       |
+| systemd v258+ compatible     |    ❌    |      ❌      |        ✅       |
+| Modern eBPF build fixes      |    ❌    |      ❌      |        ✅       |
+| Community rule compatibility |    ✅    |      ✅      |        ✅       |
+| Active maintenance           |    ❌    |      ⚠️     |        ✅       |
+
+---
+
 ## Installation
 
 #### Dependencies
